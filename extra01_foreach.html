@@ -1,0 +1,70 @@
+<p>List all array items, with keys and values:</p>
+
+<p id="demo"></p>
+
+<script>
+var fruits = ["apple", "orange", "cherry"];
+fruits.forEach(myFunction);
+
+function myFunction(item, index) {
+  document.getElementById("demo").innerHTML += index + ":" + item + "<br>"; 
+}
+</script>
+
+<!-- ejemplo 2 -->
+<p>For each element in the array: multiply the value with 10 and update the element value:</p>
+
+<p id="demo2"></p>
+
+<script>
+var numbers = [65, 44, 12, 4];
+numbers.forEach(myFunction)
+
+function myFunction(item, index, arr) {
+  arr[index] = item * 10;
+}
+
+document.getElementById("demo2").innerHTML = numbers;
+</script>
+
+<!-- ejemplo 3 -->
+<p>Get the sum of the numbers in the array.</p>
+
+<p id="demo3"></p>
+
+<script>
+var sum = 0;
+var numbers = [65, 44, 12, 4];
+numbers.forEach(myFunction);
+
+function myFunction(item) {
+  sum += item;
+  document.getElementById("demo3").innerHTML = sum;
+}
+</script>
+<!-- // ejemplo 4 -->
+<script>
+var miArray = [ 2, 4, 6, 8, 10 ];
+miArray.forEach( function(valor, indice, array) {
+    console.log("En el índice " + indice + " hay este valor: " + valor);
+});
+</script>
+
+<!-- ejemplo 5 -->
+<script>
+// Método Object#keys combinado con Método Array#forEach
+// Object.keys(objeto) Para obtener en un array asociativo las propiedades de un Objeto. Aportación de eledgaar
+
+var obj = {
+  first: "John",
+  last: "Doe"
+}
+
+// ES6
+Object.keys(obj).forEach(key => console.log(key, obj[key]))
+
+// ES5
+Object.keys(obj).forEach(function(key) {
+  console.log(key, obj[key])
+})
+</script>

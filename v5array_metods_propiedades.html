@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var amigos = ['Carlos', 'juan', 'alexito', 'manuel'];
+        amigos[0] = 'Arturito';
+        document.write('tienes ' , amigos.length+' amigos' + '<br>');
+        //ANADIENDO ultimos elementos al arreglo
+        amigos[amigos.length] = 'jajaa';
+        amigos[amigos.length] = 'jeje';
+        document.write('tienes ' + amigos.length + ' amigos');
+        //add ultimos elemnetos al arreglo 2 metodo
+        amigos.push('jiji', 'jojo', 'juju');
+        amigos.pop();
+        amigos.pop();
+        amigos.pop();
+
+        // USO DE CONCAT, UNIR 2 ARREGLOS
+        var hege = ["Cecilie", "Lone"];
+        var stale = ["Emil", "Tobias", "Linus"];
+        var u1 = hege.concat(stale);
+
+        // USO DE CONCAT, UNIR 3 ARREGLOS
+        var hege = ["Cecilie", "Lone"];
+        var stale = ["Emil", "Tobias", "Linus"];
+        var kai = ["Robin"];
+        var u2 = hege.concat(stale, kai);
+        //USO join
+        document.write('<br>'+amigos.join('<br>'))//JODERR sera buena practica?
+        var amigos2= amigos.join('#')
+        document.write('<br>',amigos2);
+//uso  DE .sort
+var ordenados=amigos.sort();
+document.write('<br>',ordenados);
+// uso de .reverse
+var ordenados=amigos.reverse();
+document.write('<br>',ordenados);
+
+    </script>
+</body>
+
+</html>
